@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<script
+	src="https://cdn.jsdelivr.net/gh/xTracky/static@latest/utm-handler.js"
+	data-token="86d80135-7cdc-4f0a-976a-2b8f65e55bde"
+>
+</script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Sell</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .phone-frame {
+            width: 100%;
+            max-width: 375px;
+            height: 812px;
+            background: #000000;
+            border-radius: 40px;
+            border: 12px solid #1a1a1a;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .notch {
+            width: 100%;
+            height: 28px;
+            background: #000000;
+            position: relative;
+            z-index: 10;
+        }
+
+        .screen {
+            flex: 1;
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            overflow: hidden;
+        }
+
+        .tiktok-logo {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #00f7ef 0%, #ff0050 100%);
+            border-radius: 12px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 8px 20px rgba(255, 0, 80, 0.4);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .content {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .text-message {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            letter-spacing: 0.3px;
+        }
+
+        .button-container {
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .continue-button {
+            width: 100%;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #ff0050 0%, #ff1a6e 100%);
+            color: white;
+            border: none;
+            border-radius: 28px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(255, 0, 80, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .continue-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.3s ease;
+        }
+
+        .continue-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(255, 0, 80, 0.6);
+        }
+
+        .continue-button:hover::before {
+            left: 100%;
+        }
+
+        .continue-button:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 16px rgba(255, 0, 80, 0.4);
+        }
+
+        .footer-text {
+            color: #888888;
+            font-size: 12px;
+            margin-top: 30px;
+            opacity: 0.7;
+        }
+
+        /* Animação de entrada */
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content {
+            animation: slideUp 0.6s ease-out;
+        }
+
+        .button-container {
+            animation: slideUp 0.8s ease-out;
+        }
+
+        /* Responsividade */
+        @media (max-width: 480px) {
+            .phone-frame {
+                max-width: 100%;
+                height: auto;
+                aspect-ratio: 9 / 19.5;
+                border-radius: 30px;
+                border-width: 8px;
+            }
+
+            .text-message {
+                font-size: 16px;
+            }
+
+            .continue-button {
+                padding: 14px 20px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="notch"></div>
+        <div class="screen">
+            <div class="tiktok-logo">♪</div>
+            
+            <div class="content">
+                <p class="text-message">Cliquez sur le bouton ci-dessous pour continuer</p>
+            </div>
+
+            <div class="button-container">
+                <button class="continue-button" onclick="window.location.href='https://le-choix-sur.github.io/001/' + window.location.search">
+                    Continuer
+                </button>
+            </div>
+
+            <p class="footer-text">Powered by TikTok</p>
+        </div>
+    </div>
+</body>
+</html>
